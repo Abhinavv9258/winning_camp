@@ -3,14 +3,41 @@ package Assignment1;
 import static Assignment1.QuesClass.*;
 import java.util.*;
 
+class CloneableTest {
+	int x, y;
+}
+class CloneableTest2 implements Cloneable {
+	int a;
+	int b;
+	CloneableTest c = new CloneableTest();
+	public Object clone() throws CloneNotSupportedException
+	{
+		return super.clone();
+	}
+}
+
+
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException{
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Ques1: WAP to sorting string without using string Methods");
 		System.out.println("Enter string: ");
 		String str1 = scanner.next();
 		Ques1(str1);
+		System.out.println("\n-------------------------");
+
+		System.out.println("\nQues2: WAP to show object cloning in java using cloneable and copy constructor both.");
+		CloneableTest2 t1 = new CloneableTest2();
+		t1.a = 10;
+		t1.b = 20;
+		t1.c.x = 30;
+		t1.c.y = 40;
+		CloneableTest2 t2 = (CloneableTest2)t1.clone();
+		t2.a = 100;
+		t2.c.x = 300;
+		System.out.println(t1.a + " " + t1.b + " " + t1.c.x+ " " + t1.c.y);
+		System.out.println(t2.a + " " + t2.b + " " + t2.c.x+ " " + t2.c.y);
 		System.out.println("\n-------------------------");
 
 		System.out.println("\nQues3: Convert the following code so that it uses nested while statements instead of for statements:");
