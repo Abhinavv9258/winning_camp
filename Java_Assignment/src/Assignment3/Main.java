@@ -40,6 +40,11 @@ public class Main {
 		System.out.println("-------------------------");
 
 		System.out.println("\nQues6: Inserting & Deleting Elements from an Array");
+		System.out.println("Enter size of array : ");
+		int sizeArr3 = scanner.nextInt();
+		int[] arr3 = new int[size];
+		QuesClass.Ques6(arr3,sizeArr3);
+
 		System.out.println("-------------------------");
 
 		System.out.println("\nQues7: Cyclically Permute the Elements of an Array.");
