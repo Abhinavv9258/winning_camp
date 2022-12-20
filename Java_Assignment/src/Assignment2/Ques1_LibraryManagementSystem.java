@@ -79,7 +79,7 @@ public class Ques1_LibraryManagementSystem {
 		BookStore BS = new BookStore();
 		while(flag){
 			System.out.println("\n20BCS9258 Abhinav Verma\n");
-			System.out.print("-------Video Rental Store-------");
+			System.out.print("-------Library Management-------");
 			System.out.println("\nPress 1 : To Add Book\nPress 2 : To Borrow Book\n" +
 					"Press 3 : To Return Book\nPress 4 : To List Inventory\n" +
 					"Press 5 : Exit");
